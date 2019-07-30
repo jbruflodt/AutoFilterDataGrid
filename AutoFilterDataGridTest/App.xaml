@@ -1,11 +1,9 @@
-﻿<Application
+﻿<Application x:Class="AutoFilterDataGridTest.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:AutoFilterDataGridTest"
-             xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="AutoFilterDataGridTest.App"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-
-
+         
     </Application.Resources>
 </Application>

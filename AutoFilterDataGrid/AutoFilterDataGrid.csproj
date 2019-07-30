@@ -15,8 +15,8 @@
     <RepositoryUrl>https://github.com/jbruflodt/AutoFilterDataGrid.git</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <AssemblyVersion>1.0.19210.1921</AssemblyVersion>
-    <FileVersion>1.0.19210.1921</FileVersion>
+    <AssemblyVersion>1.0.19209.1628</AssemblyVersion>
+    <FileVersion>1.0.19209.1628</FileVersion>
     <Version>$(AssemblyVersion)</Version>
     <PackageVersion>$(AssemblyVersion)</PackageVersion>
     <ShouldCreateLogs>True</ShouldCreateLogs>
@@ -44,7 +44,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="NewDataGrid.xaml" />
+    <Compile Remove="AutoFilterDataGrid.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="PresentationFramework.Aero" />
@@ -64,21 +64,17 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="AutoFilterDataGrid.xaml.cs" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="NewDataGrid.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="FilteredObject13400_128x128.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="UserControl1.xaml">
+    <None Update="NewDataGrid.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>

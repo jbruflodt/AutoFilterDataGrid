@@ -15,8 +15,8 @@
     <RepositoryUrl>https://github.com/jbruflodt/AutoFilterDataGrid.git</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <AssemblyVersion>1.0.19209.1628</AssemblyVersion>
-    <FileVersion>1.0.19209.1628</FileVersion>
+    <AssemblyVersion>1.0.19207.1512</AssemblyVersion>
+    <FileVersion>1.0.19207.1512</FileVersion>
     <Version>$(AssemblyVersion)</Version>
     <PackageVersion>$(AssemblyVersion)</PackageVersion>
     <ShouldCreateLogs>True</ShouldCreateLogs>
@@ -44,9 +44,6 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="AutoFilterDataGrid.xaml.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -64,7 +61,12 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AutoFilterDataGrid.xaml.cs" />
+    <Page Include="AutoFilterDataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -72,11 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="FilteredObject13400_128x128.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Update="NewDataGrid.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
   </ItemGroup>
   <Target Name="PushNuGet" AfterTargets="Pack" Condition="'$(Configuration)'=='Release_Package'">
     <Exec Command="nuget push &quot;$(OutputPath)$(PackageId).$(PackageVersion).nupkg&quot; -Source &quot;https://api.nuget.org/v3/index.json&quot;&#xD;&#xA;" />
